@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { FormInput } from "../form/form-input";
+// import { FormInput } from "../form/form-input";
 import { FormSubmit } from "../form/form-submit";
 import { Eye, EyeOff, X } from "lucide-react";
 import { Button } from "../ui/button";
@@ -44,7 +44,7 @@ const LoginForm = () => {
       action={onSubmit}
       className="flex flex-col justify-between w-full gap-3 -mt-3"
     >
-      <FormInput
+      {/* <FormInput
         id="identifier"
         label="Email address or Phone"
         placeholder="Email address or Phone"
@@ -68,7 +68,7 @@ const LoginForm = () => {
             <EyeOff className="w-5 text-slate-600" />
           )}
         </button>
-      </div>
+      </div> */}
 
       <Link href="/forgot-password" className="hover:text-blue-700">
         forgot password?

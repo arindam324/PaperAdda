@@ -8,7 +8,7 @@ import { redirect } from "next/navigation";
 import { supabase } from "@/supabase";
 import Link from "next/link";
 
-export const fontSans = Rubik_Dirt({ weight: "400", subsets: ["cyrillic"] });
+// export const fontSans = Rubik_Dirt({ weight: "400", subsets: ["cyrillic"] });
 
 const LoginPage = async () => {
   const token = cookies().get("token")?.value as string;

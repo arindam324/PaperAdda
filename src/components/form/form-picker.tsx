@@ -1,11 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
-import { unsplash } from "@/lib/unsplash";
+// import { unsplash } from "@/lib/unsplash";
 import { Check, Loader2 } from "lucide-react";
 import { useFormStatus } from "react-dom";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { defaultImages } from "@/constants/images";
+// import { defaultImages } from "@/constants/images";
 import Link from "next/link";
 import { FormErrors } from "./form-errors";
 
@@ -17,34 +17,34 @@ interface FormPickerProps {
 export const FormPicker = ({ id, errors }: FormPickerProps) => {
   const { pending } = useFormStatus();
 
-  const [images, setImages] =
-    useState<Array<Record<string, any>>>(defaultImages);
+  // const [images, setImages] =
+  // useState<Array<Record<string, any>>>(defaultImages);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [selectedImageId, setSelectedImageId] = useState(null);
 
-  useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const result = await unsplash.photos.getRandom({
-          collectionIds: ["317099"],
-          count: 9,
-        });
+  // useEffect(() => {
+  //   const fetchImages = async () => {
+  //     try {
+  //       const result = await unsplash.photos.getRandom({
+  //         collectionIds: ["317099"],
+  //         count: 9,
+  //       });
 
-        if (result && result.response) {
-          const img = result.response as Array<Record<string, any>>;
-          setImages(img);
-        } else {
-          console.error("Failed to get images from unsplash!");
-        }
-      } catch (error) {
-        console.log(error);
-        setImages(defaultImages);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    fetchImages();
-  }, []);
+  //       if (result && result.response) {
+  //         const img = result.response as Array<Record<string, any>>;
+  //         setImages(img);
+  //       } else {
+  //         console.error("Failed to get images from unsplash!");
+  //       }
+  //     } catch (error) {
+  //       console.log(error);
+  //       setImages(defaultImages);
+  //     } finally {
+  //       setIsLoading(false);
+  //     }
+  //   };
+  //   fetchImages();
+  // }, []);
 
   if (isLoading) {
     return (
@@ -57,7 +57,7 @@ export const FormPicker = ({ id, errors }: FormPickerProps) => {
   return (
     <div className="relative">
       <div className="grid grid-cols-3 gap-2 mb2">
-        {images.map((image) => (
+        {/* {images.map((image) => (
           <div
             key={image.id}
             className={cn(
@@ -98,7 +98,7 @@ export const FormPicker = ({ id, errors }: FormPickerProps) => {
               </div>
             )}
           </div>
-        ))}
+        ))} */}
       </div>
       <FormErrors id="image" errors={errors} />
     </div>

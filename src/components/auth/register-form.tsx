@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { FormInput } from "../form/form-input";
+// import { FormInput } from "../form/form-input";
 import { FormSubmit } from "../form/form-submit";
 import { Eye, EyeOff, X } from "lucide-react";
 import { Button } from "../ui/button";
@@ -12,20 +12,20 @@ import { register } from "@/actions/register";
 import { toast } from "sonner";
 import { Session, User } from "@supabase/supabase-js";
 import { useAuth } from "@/hooks/use-auth";
-import {setCookie} from 'cookies-next';
+import { setCookie } from "cookies-next";
 
 const RegisterForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const router = useRouter();
-  const {login} = useAuth();
+  const { login } = useAuth();
 
   const { execute, isLoading, fieldErrors } = useAction(register, {
-    onSuccess: (data:{user:User; session:Session}) => {
-      const {user} = data;
+    onSuccess: (data: { user: User; session: Session }) => {
+      const { user } = data;
       login(user);
-      return router.push('/');
+      return router.push("/");
     },
     onError: (error) => {
       console.log(error);
@@ -33,7 +33,7 @@ const RegisterForm = () => {
     },
   });
 
-  fieldErrors
+  fieldErrors;
 
   const onSubmit = async (formData: FormData) => {
     const name = formData.get("name") as string;
@@ -54,7 +54,7 @@ const RegisterForm = () => {
       action={onSubmit}
       className="flex flex-col justify-between w-full -mt-5 gap-3 "
     >
-      <FormInput
+      {/* <FormInput
         id="name"
         label="Full Name"
         placeholder="Enter full name"
@@ -105,7 +105,7 @@ const RegisterForm = () => {
             <EyeOff className="w-5 text-slate-600" />
           )}
         </button>
-      </div>
+      </div> */}
 
       <FormSubmit className="mt-3" disabled={isLoading}>
         Register

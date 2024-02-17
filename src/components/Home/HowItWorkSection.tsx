@@ -34,8 +34,9 @@ const HowItWorkSection = () => {
           <div className="text-center">
             <h3 className="text-lg font-semibold">Practice and revise</h3>
             <p className="text-sm text-gray-600">
-              Learning isn't just limited to classes with our practice section,
-              mock tests and lecture notes shared as PDFs for your revision
+              Learning isn&apos;t just limited to classes with our practice
+              section, mock tests and lecture notes shared as PDFs for your
+              revision
             </p>
           </div>
         </div>

@@ -2,7 +2,7 @@
 
 import { KeyboardEventHandler, forwardRef } from "react";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "../ui/textarea";
+// import { Textarea } from "../ui/textarea";
 import { cn } from "@/lib/utils";
 import { FormErrors } from "./form-errors";
 import { useFormStatus } from "react-dom";
@@ -51,7 +51,7 @@ export const FormTextarea = forwardRef<HTMLTextAreaElement, FormTextareaProps>(
               {label}
             </Label>
           ) : null}
-          <Textarea
+          {/* <Textarea
             onKeyDown={onKeyDown}
             onBlur={onBlur}
             onClick={onClick}
@@ -67,7 +67,7 @@ export const FormTextarea = forwardRef<HTMLTextAreaElement, FormTextareaProps>(
             )}
             aria-describedby={`${id}-error`}
             defaultValue={defaultValue}
-          />
+          /> */}
         </div>
         <FormErrors id={id} errors={errors} />
       </div>

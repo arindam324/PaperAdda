@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { FormInput } from "../form/form-input";
+// import { FormInput } from "../form/form-input";
 import { FormSubmit } from "../form/form-submit";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
@@ -15,13 +15,13 @@ const ForgotPasswordForm = () => {
       method="POST"
       className="flex flex-col gap-5"
     >
-      <FormInput
+      {/* <FormInput
         id="email"
         label="Email"
         type="email"
         placeholder="Email address"
         labelClassName="text-lg"
-      />
+      /> */}
       <FormSubmit variant="grey" className="w-[140px]">
         Reset password
       </FormSubmit>

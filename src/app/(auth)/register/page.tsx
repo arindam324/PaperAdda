@@ -6,7 +6,7 @@ import GoogleAuthForm from "@/components/auth/google-auth";
 import { Rubik_Dirt } from "next/font/google";
 import { cn } from "@/lib/utils";
 
-export const fontSans = Rubik_Dirt({ weight: "400", subsets: ["cyrillic"] });
+// export const fontSans = Rubik_Dirt({ weight: "400", subsets: ["cyrillic"] });
 
 const RegisterPage = () => {
   return (
